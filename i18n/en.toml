@@ -1,0 +1,37 @@
+[videos]
+other = "Videos"
+[about]
+other = "About"
+[forums]
+other = "Forums"
+[merchandise]
+other = "Merchandise"
+[blog]
+other = "Blog"
+[contact]
+other = "Contact"
+
+[graphicdesign]
+other = "Graphic Design"
+[webdesign]
+other = "Web Design"
+[webdevelopment]
+other = "Web Development"
+
+[youtube]
+other = "YouTube"
+[patreon]
+other = "Patreon"
+[mastodon]
+other = "Mastodon"
+[reddit]
+other = "Reddit"
+[irc]
+other = "IRC"
+
+[partners]
+other = "Partners"
+[faqs]
+other = "FAQ's"
+[badges]
+other = "Badges"

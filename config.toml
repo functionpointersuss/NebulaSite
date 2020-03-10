@@ -1,0 +1,154 @@
+baseURL = "https://www.syossetnebula.tech/"
+publishDir = "../"
+languageCode = "en-us"
+title = "Navigator | Responsive Multipurpose Bootstrap Hugo Template"
+theme = "navigator"
+
+[markup.goldmark.renderer]
+unsafe= true
+
+# Build robots.txt file
+enableRobotsTXT = true
+# google analytics tracking id
+googleAnalytics = ""
+
+enableGitInfo = false
+pygmentsCodeFences = true
+
+# Site Params
+[params]
+    logo = "images/logo.png"
+
+# Gestion des langues : FR / EN / NL / DE
+[Languages]
+
+    ############# 2 - Site en ENGLISH
+    [Languages.en]
+    weight = 2
+    languageCode = "en-us"
+    title = "Syosset Nebula 12382"
+    dateFormat = "March 8, 2020"
+
+    home = "Home"
+    logo = "images/logo.png"
+    menufixed = false
+
+    footerDescription = "Syosset Nebula's Website, where we post blogs and tutorials. Focuses on spreading FIRST and all the fun and learning we have."
+    footerSocialTitle = "Social Media"
+    footerServiceTitle = "Service"
+    footerQuicklinkTitle = "Quicklinks"
+    footerAboutTitle = "About"
+    footerSubscribeTitle = "Subscribe"
+
+    # Hero Area Section
+    [Languages.en.params.hero]
+        enable  = true
+        heading = "Syosset Nebula's Website"
+        description = "Syosset Nebula's Website, where we post blogs and tutorials. Focuses on spreading FIRST and all the fun and learning we have. We have our latest video on the left."
+        button  = true
+        btnText = "Know More"
+        btnURL  = "about"
+        videoThumb = "images/slider/video-player-thumb.png"
+        videoURL   = "https://www.youtube.com/embed/-1JODB_z_VA"
+
+    # About 2 Section
+    [Languages.en.params.aboutSm]
+        enable  = true
+        title   = "Exploring and Spreading FIRST while competing."
+        description = "We are an all juniors team that is dedicated to spreading FIRST. Although we started in Freshmen year we had a long and complcated history of failures. This was our first year that we really came together to to do something great."
+
+    # Videos Section On Homepage
+    [Languages.en.params.videos]
+        enable  = true
+        topTitle= "A FEW RECENT VIDEOS"
+        title   = "Videos by Team Nebula"
+        subtitle= "Videos exploring a wide range of topics involving FTC Robotics, from programming to Vlogs!"
+
+    # Blog Section On Homepage
+    [Languages.en.params.blog]
+        enable  = true
+        topTitle= "READ ABOUT LINUX"
+        title   = "Latest Blog Posts"
+        subtitle= "Informative and instructive articles to further you along on your Linux journey!"
+
+    # Contact Section
+    [Languages.en.params.contact]
+        enable   = true
+        topTitle = "DROP US A NOTE"
+        title    = "Contact Info"
+        subtitle = "Looking to get in contact with Syosset Nebula?  Follow or message us on these websites."
+        yt_cta   = "Subscribe to Team Nebula and Watch our Latest Vlogs and Tutorials."
+        youtube  = "https://www.youtube.com/channel/UChJKqcQJyh2rZBgxlvpOhUg"
+        redd_cta = "Follow Us on Reddit"
+        reddit   = "https://www.reddit.com/r/distrotube/"
+        gith_cta = "We are on Github Find our robot code there in our many repositories."
+        github   = "https://github.com/joshuayun61"
+        inst_cta = "Follow us on Instagram!"
+        instagram = "https://www.instagram.com/syossetnebula/"
+
+    [Languages.en.params.team]
+        enable = true
+
+
+
+    # Call to Action Section on About Page
+    [Languages.en.params.cta]
+        enable  = false
+        bg      = "images/call-to-action/call-to-action-bg-2.jpg"
+        title   = "Let's Create Something Together"
+        subtitle= "Distrotube.com is not only a website for mirroring the video content of DT,<br> it is also a website where the community can contribute with blog and forum posts.<br> This website is built upon free and open source software. You can contribute to the<br>  construction of this site and its content through our GitLab repository."
+        btnText = "Our GitLab"
+
+# We Used Themefisher Icon font for Icon, for more details check this github repository - https://github.com/themefisher/themefisher-font
+
+# Site Menus
+[menu]
+    # Navbar Menus
+    [[menu.nav]]
+        name    = "videos"
+        url     = "videos"
+        weight  = 2
+    [[menu.nav]]
+        name    = "blog"
+        url     = "blog"
+        weight  = 3
+    [[menu.nav]]
+        name    = "about"
+        url     = "about"
+        weight  = 4
+    [[menu.nav]]
+        name    = "contact"
+        url     = "contact"
+        weight  = 5
+
+    # Footer Social Menu
+    [[menu.social]]
+        name    = "youtube"
+        url     = "https://www.youtube.com/channel/UChJKqcQJyh2rZBgxlvpOhUg"
+        weight  = 1
+    [[menu.social]]
+        name    = "instagram"
+        url     = "https://www.instagram.com/syossetnebula/"
+        weight  = 2
+    [[menu.social]]
+        name    = "reddit"
+        url     = "https://www.reddit.com/r/distrotube/"
+        weight  = 3
+
+    # Footer Quick links Menu
+    [[menu.quicklink]]
+        name    = "videos"
+        url     = "videos"
+        weight  = 2
+    [[menu.quicklink]]
+        name    = "blog"
+        url     = "blog"
+        weight  = 3
+    [[menu.quicklink]]
+        name    = "about"
+        url     = "about"
+        weight  = 4
+    [[menu.quicklink]]
+        name    = "contact"
+        url     = "contact"
+        weight  = 5
