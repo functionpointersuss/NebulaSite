@@ -1,154 +1,218 @@
-baseURL = "https://www.syossetnebula.tech/"
-publishDir = "../"
+# Site settings
+baseURL = "https://syossetnebula.tech/"
 languageCode = "en-us"
-title = "Navigator | Responsive Multipurpose Bootstrap Hugo Template"
-theme = "navigator"
+title = "Syosset Nebula"
+theme = "forty"
 
-[markup.goldmark.renderer]
-unsafe= true
-
-# Build robots.txt file
-enableRobotsTXT = true
-# google analytics tracking id
+# Enter your tracking code to enable Google Analytics
 googleAnalytics = ""
 
-enableGitInfo = false
-pygmentsCodeFences = true
+# Enter your disqus shortname to enable comments
+disqusShortname = ""
 
-# Site Params
 [params]
-    logo = "images/logo.png"
+  # You can use Markdown syntax for urls [text](//url.to/source)
+  # To create multi-line text in strings use the """example Text""" format
+  #
+  # All icons using Fontawesome's icon font. Look at fontawesome.io/icons
+  # for more icons. The icons are represented by their corresponding
+  # CSS class.
 
-# Gestion des langues : FR / EN / NL / DE
-[Languages]
+  # Provide your metadata here.
+  name = "Joshua Yun"
+  description = "Your description"
 
-    ############# 2 - Site en ENGLISH
-    [Languages.en]
-    weight = 2
-    languageCode = "en-us"
+  # Link custom assets relative to /static
+  custom_css = []
+  custom_js  = []
+  favicon    = "favicon.ico"
+
+  # Just a custom image variable, please define it in .md files for content.
+  image = ""
+
+  # 404 error customization
+  [params.error404]
+    heading = "Page couldn't be found"
+    text = "Please visit [this page](/) Since SINHAYAS1 is a BOT"
+
+  # Navigation Section
+  [params.navigation]
+    title = "Team Nebula"
+    subtitle = "By Joshua Yun"
+    menu = "Menu"
+    # Optional logo as brand stored in img/
+    # logo = "logo.png"
+
+    [[params.navigation.links]]
+      name = "Home"
+      url = "#"
+
+    [[params.navigation.links]]
+      name = "About"
+      url = "about"
+
+    [[params.navigation.links]]
+      name = "Our Team"
+      url = "members"
+
+    [[params.navigation.links]]
+      name = "Our Mentors"
+      url = "mentors"
+
+    [[params.navigation.links]]
+      name = "Our Robot"
+      url = "robot"
+
+    [[params.navigation.links]]
+      name = "Outreach"
+      url = "outreach"
+
+    [[params.navigation.links]]
+      name = "Programming"
+      url = "programming"
+
+    # Add custom links here by uncommenting code below. To remove links just delete
+    # the [[params.navigation.links]] map associated with that link. Copy and paste
+    # code below if you need more links. Buttons work in the same way.
+    # [[params.navigation.links]]
+    #    name = "NameOfLink"
+    #    url = "UrlOfLink"
+
+    # Button Style 1
+    #[[params.navigation.button1]]
+    #  name = "Get Started"
+    #  url = "blogs"
+
+
+  # Banner section
+  [params.banner]
+    # To change the background image on the homepage banner, replace 'banner.jpg' in
+    # the 'static/img' folder.
     title = "Syosset Nebula 12382"
-    dateFormat = "March 8, 2020"
+    subtitle = "We are Team Nebula 12382 and\nwe are spreading the word of FIRST"
+    buttonText = "Get Started"
 
-    home = "Home"
-    logo = "images/logo.png"
-    menufixed = false
 
-    footerDescription = "Syosset Nebula's Website, where we post blogs and tutorials. Focuses on spreading FIRST and all the fun and learning we have."
-    footerSocialTitle = "Social Media"
-    footerServiceTitle = "Service"
-    footerQuicklinkTitle = "Quicklinks"
-    footerAboutTitle = "About"
-    footerSubscribeTitle = "Subscribe"
+  # Tiles Section
+  [params.tiles]
+    enable = true
+    # Display your showcases here.
+    
+    [[params.tiles.showcase]]
+      title = "About Us"
+      subtitle = "Team 12382"
+      image = "oufish.jpg"
+      url = "about"
 
-    # Hero Area Section
-    [Languages.en.params.hero]
-        enable  = true
-        heading = "Syosset Nebula's Website"
-        description = "Syosset Nebula's Website, where we post blogs and tutorials. Focuses on spreading FIRST and all the fun and learning we have. We have our latest video on the left."
-        button  = true
-        btnText = "Know More"
-        btnURL  = "about"
-        videoThumb = "images/slider/video-player-thumb.png"
-        videoURL   = "https://www.youtube.com/embed/-1JODB_z_VA"
+    [[params.tiles.showcase]]
+      title = "Our Robot"
+      subtitle = "SkyStone 19-20"
+      image = "robot.jpg"
+      url = "robot"
 
-    # About 2 Section
-    [Languages.en.params.aboutSm]
-        enable  = true
-        title   = "Exploring and Spreading FIRST while competing."
-        description = "We are an all juniors team that is dedicated to spreading FIRST. Although we started in Freshmen year we had a long and complcated history of failures. This was our first year that we really came together to to do something great."
+    [[params.tiles.showcase]]
+      title = "Outreach"
+      subtitle = "Connecting to the Community"
+      image = "outreach.jpg"
+      url = "outreach"
 
-    # Videos Section On Homepage
-    [Languages.en.params.videos]
-        enable  = true
-        topTitle= "A FEW RECENT VIDEOS"
-        title   = "Videos by Team Nebula"
-        subtitle= "Videos exploring a wide range of topics involving FTC Robotics, from programming to Vlogs!"
+    [[params.tiles.showcase]]
+      title = "Programming"
+      subtitle = "Smart Robot"
+      image = "code.jpg"
+      url = "programming"
 
-    # Blog Section On Homepage
-    [Languages.en.params.blog]
-        enable  = true
-        topTitle= "READ ABOUT LINUX"
-        title   = "Latest Blog Posts"
-        subtitle= "Informative and instructive articles to further you along on your Linux journey!"
+    [[params.tiles.showcase]]
+      title = "Our Team"
+      subtitle = "Members"
+      image = "team.jpeg"
+      url = "members"
+
+    [[params.tiles.showcase]]
+      title = "Mentors"
+      subtitle = "Connecting with Engineers"
+      image = "mentor.jpg"
+      url = "members"
+
+    # You can make more showcases by copy and pasting the code above
+
+  [params.blog]
+    # All blogs defined in their own files. You can find example blogs
+    # at 'exampleSite/content/blogs'. Copy the 'blogs' folder into the 'content' directory
+    # at the root of this Hugo site.
+    # For more informtion take a look at the README.
+    # To add more blogs just copy and paste the code.
+
+  # Section Type Two
+  [params.two]
+    enable = true
+    title = "Syosset Nebula"
+    subtitle = """We are an all Junior team dedicated to spreading the word of FIRST.
+                  From making the best robot possible to helping girl scouts learn to code,
+                  we want to live and breathe FTC."""
+    buttonText = "Learn More"
+    url = "about"
+
+
+  # Contact section
+  [params.contact]
+    enable = true
+    buttonSend = "Send message"
+    buttonClear = "Clear"
+    formCode = "xnqzaekv"
+
+  [[params.contact.email]]
+    title = "Email"
+    email = "syossetnebula@gmail.com"
+
+  [[params.contact.github]]
+    title = "Github"
+    github = "joshuayun61"
+
+  [[params.contact.instagram]]
+    title = "Instagram"
+    instagram = "syossetnebula"
+
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below and uncomment
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+    # formEmail = "example@domain.com"
 
     # Contact Section
-    [Languages.en.params.contact]
-        enable   = true
-        topTitle = "DROP US A NOTE"
-        title    = "Contact Info"
-        subtitle = "Looking to get in contact with Syosset Nebula?  Follow or message us on these websites."
-        yt_cta   = "Subscribe to Team Nebula and Watch our Latest Vlogs and Tutorials."
-        youtube  = "https://www.youtube.com/channel/UChJKqcQJyh2rZBgxlvpOhUg"
-        redd_cta = "Follow Us on Reddit"
-        reddit   = "https://www.reddit.com/r/distrotube/"
-        gith_cta = "We are on Github Find our robot code there in our many repositories."
-        github   = "https://github.com/joshuayun61"
-        inst_cta = "Follow us on Instagram!"
-        instagram = "https://www.instagram.com/syossetnebula/"
-
-    [Languages.en.params.team]
-        enable = true
+    # You can add multiple emails, phone numbers, or addresses
+    # by copying the corresponding map with frontmatter code.
 
 
+  # Footer section
+  [params.footer]
+    enable = true
+    copyright = "Syosset Nebula"
 
-    # Call to Action Section on About Page
-    [Languages.en.params.cta]
-        enable  = false
-        bg      = "images/call-to-action/call-to-action-bg-2.jpg"
-        title   = "Let's Create Something Together"
-        subtitle= "Distrotube.com is not only a website for mirroring the video content of DT,<br> it is also a website where the community can contribute with blog and forum posts.<br> This website is built upon free and open source software. You can contribute to the<br>  construction of this site and its content through our GitLab repository."
-        btnText = "Our GitLab"
+    # Uses font awesome icons
+    [[params.footer.social]]
+      icon = "fa-instagram"
+      url= "https://www.instagram.com/syossetnebula/"
+      label = "Instagram"
+    
+    [[params.footer.social]]
+      icon = "fa-github"
+      url= "https://www.github.com/joshuayun61"
+      label = "GitHub"
 
-# We Used Themefisher Icon font for Icon, for more details check this github repository - https://github.com/themefisher/themefisher-font
+    [[params.footer.email]]
+      icon = "fa-envelope"
+      email = "syossetnebula@gmail.com"
+      label = "Email"
 
-# Site Menus
-[menu]
-    # Navbar Menus
-    [[menu.nav]]
-        name    = "videos"
-        url     = "videos"
-        weight  = 2
-    [[menu.nav]]
-        name    = "blog"
-        url     = "blog"
-        weight  = 3
-    [[menu.nav]]
-        name    = "about"
-        url     = "about"
-        weight  = 4
-    [[menu.nav]]
-        name    = "contact"
-        url     = "contact"
-        weight  = 5
-
-    # Footer Social Menu
-    [[menu.social]]
-        name    = "youtube"
-        url     = "https://www.youtube.com/channel/UChJKqcQJyh2rZBgxlvpOhUg"
-        weight  = 1
-    [[menu.social]]
-        name    = "instagram"
-        url     = "https://www.instagram.com/syossetnebula/"
-        weight  = 2
-    [[menu.social]]
-        name    = "reddit"
-        url     = "https://www.reddit.com/r/distrotube/"
-        weight  = 3
-
-    # Footer Quick links Menu
-    [[menu.quicklink]]
-        name    = "videos"
-        url     = "videos"
-        weight  = 2
-    [[menu.quicklink]]
-        name    = "blog"
-        url     = "blog"
-        weight  = 3
-    [[menu.quicklink]]
-        name    = "about"
-        url     = "about"
-        weight  = 4
-    [[menu.quicklink]]
-        name    = "contact"
-        url     = "contact"
-        weight  = 5
+    [[params.footer.quicklinks]]
+      text = "Design: "
+      url= "https://www.html5up.net"
+      alt = "HTML5 UP"
